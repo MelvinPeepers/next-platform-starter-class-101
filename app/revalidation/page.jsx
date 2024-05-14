@@ -12,7 +12,7 @@ const maxExtractLength = 200;
 const revalidateTTL = 60;
 
 const explainer = `
-This page perfoms a \`fetch\` on the server to get a random article from Wikipedia. 
+This page performs a \`fetch\` on the server to get a random article from Wikipedia. 
 The fetched data is then cached with a tag named "${tagName}" and a maximum age of ${revalidateTTL} seconds.
 
 ~~~jsx
@@ -35,7 +35,6 @@ In real-life applications, tags are typically invalidated when data has changed 
 
 For this functionality to work, Next.js uses the [fine-grained caching headers](https://docs.netlify.com/platform/caching/) available on Netlify - but you can use these features on basically any Netlify site!
 `;
-
 
 export default async function Page() {
     async function revalidateWiki() {
